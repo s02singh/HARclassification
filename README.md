@@ -1,6 +1,9 @@
 # Heart Attack Risk Prediction Web App
 
-<img src="static/heart_attack_web_app.png" alt="Heart Attack Risk Prediction" width="500"/>
+<p align="center">
+    <img src="static/heart_attack_web_app.png" alt="Heart Attack Risk Prediction" width="500"/>
+</p>
+
 
 
 ## Overview
