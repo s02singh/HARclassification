@@ -41,7 +41,7 @@ This web application predicts the risk of a heart attack based on user-input par
 
 ## Credits
   - The predictive model is built using scikit-learn and pandas.
-  - Design inspiration and guidance from the ChatGPT website.
+  - README file and webapp design guidance with ChatGPT.
  
 ## License
   - This project is licensed under the MIT License - see the LICENSE file for details.
