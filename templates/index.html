@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack Risk Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Attack Risk Prediction</h1>
+        <form method="POST" action="/predict">
+            <label for="sleep_hours">Sleep Hours Per Day:</label>
+            <input type="number" name="sleep_hours" step="0.1" required>
+
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="number" name="cholesterol" required>
+
+            <label for="obesity">Obesity (1 for Yes, 0 for No):</label>
+            <input type="number" name="obesity" min="0" max="1" required>
+
+            <label for="diabetes">Diabetes (1 for Yes, 0 for No):</label>
+            <input type="number" name="diabetes" min="0" max="1" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction is defined %}
+            <p>Prediction: {{ prediction }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
