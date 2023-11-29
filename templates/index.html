@@ -1,3 +1,4 @@
+<!-- Updated HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +12,16 @@
         <h1>Heart Attack Risk Prediction</h1>
         <form method="POST" action="/predict">
             <label for="sleep_hours">Sleep Hours Per Day:</label>
-            <input type="number" name="sleep_hours" step="0.1" required>
+            <input type="number" name="sleep_hours" step="0.1" required placeholder="e.g., 7.5">
 
             <label for="cholesterol">Cholesterol:</label>
-            <input type="number" name="cholesterol" required>
+            <input type="number" name="cholesterol" required placeholder="Enter cholesterol level">
 
             <label for="obesity">Obesity (1 for Yes, 0 for No):</label>
-            <input type="number" name="obesity" min="0" max="1" required>
+            <input type="number" name="obesity" min="0" max="1" required placeholder="0 or 1">
 
             <label for="diabetes">Diabetes (1 for Yes, 0 for No):</label>
-            <input type="number" name="diabetes" min="0" max="1" required>
+            <input type="number" name="diabetes" min="0" max="1" required placeholder="0 or 1">
 
             <button type="submit">Predict</button>
         </form>
