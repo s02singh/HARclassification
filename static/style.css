@@ -1,4 +1,3 @@
-/* static/style.css */
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap");
 
 :root {
@@ -16,21 +15,23 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: var(--ff-courier);
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh; /* Updated to min-height */
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--container-color);
+    padding: 2.5rem;
+    border-radius: 0.625rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.625rem;
+    width: 100%; /* Updated to full width */
+    max-width: 400px; /* Set a maximum width for better readability on larger screens */
 }
 
 h1 {
@@ -49,37 +50,49 @@ form {
 }
 
 label {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
+    margin-top: 0.625rem;
+    font-size: 1rem;
+    color: var(--gray);
 }
 
 input {
     font-family: var(--ff-courier);
     width: 100%;
-    padding: 8px;
-    margin: 5px 0;
+    padding: 0.5rem;
+    margin: 0.313rem 0;
     box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 0.063rem solid var(--container-color);
+    border-radius: 0.25rem;
 }
+
+/* Add this to your existing CSS file */
+
+.logo {
+    display: block;
+    margin: 0 auto; /* Center the logo */
+    max-width: 100%; /* Ensure the logo doesn't exceed its container's width */
+    max-height: 150px; /* Set the maximum height as needed */
+    width: auto;
+    height: auto;
+    margin-bottom: 1.5rem; /* Adjust as needed */
+}
+
 
 button {
     font-family: var(--ff-courier);
     background-color: var(--button-color);
     color: var(--white);
     border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem; /* 1rem = 19px */
+    margin-top: 1.3rem;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 4rem 4rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 0.188rem 0.5rem;
+    transition: opacity 0.3s ease;
 }
 
 button:hover,
 button:active {
-    opacity: 80%; 
+    opacity: 80%;
 }

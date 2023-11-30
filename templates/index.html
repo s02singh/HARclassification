@@ -1,4 +1,3 @@
-<!-- Updated HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,29 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Attack Risk Prediction</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='HARlogo.png') }}" type="image/png">
 </head>
 <body>
     <div class="container">
         <h1>Heart Attack Risk Prediction</h1>
+        <img src="{{ url_for('static', filename='HARlogo.png') }}" alt="Heart Attack Risk Prediction Logo" class="logo">
+        {% if prediction is defined %}
+            {% if prediction == 1 %}
+                <p>Patient is at risk of heart attack</p>
+            {% else %}
+                <p>Patient is not at risk of heart attack</p>
+        
+            {% endif %}
+        {% else %}
+            <p>Enter Information</p>
+        {% endif %}
         <form method="POST" action="/predict">
-            <label for="sleep_hours">Sleep Hours Per Day:</label>
-            <input type="number" name="sleep_hours" step="0.1" required placeholder="e.g., 7.5">
+            <label for="sex">Sex:</label>
+            <input type="number" name="sex" min="0" max="1" required placeholder="0 for male or 1 for female">
+
+            <label for="diabetes">Diabetes:</label>
+            <input type="number" name="diabetes" min="0" max="1" required placeholder="0 or 1">
+
+            <label for="family_history">Family History:</label>
+            <input type="number" name="family_history" min="0" max="1" required placeholder="0 or 1">
+
+            <label for="smoking">Smoking:</label>
+            <input type="number" name="smoking" min="0" max="1" required placeholder="0 or 1">
+
+            <label for="obesity">Obesity:</label>
+            <input type="number" name="obesity" min="0" max="1" required placeholder="0 or 1">
+
+            <label for="alcohol_consumption">Alcohol Consumption:</label>
+            <input type="number" name="alcohol_consumption" min="0" max="1" required placeholder="0 or 1">
+
+            <label for="diet">Diet:</label>
+            <input type="number" name="diet" min="0" max="1" required placeholder="0 for unhealthy or 1 for healthy">
+
+            <label for="previous_heart_problems">Previous Heart Problems:</label>
+            <input type="number" name="previous_heart_problems" min="0" max="1" required placeholder="0 or 1">
+
+            <label for="exercise_hours_per_week">Exercise Hours Per Week:</label>
+            <input type="number" name="exercise_hours_per_week" step="0.1" required placeholder="e.g., 3.5">
+
+            <label for="sleep_hours_per_day">Sleep Hours Per Day:</label>
+            <input type="number" name="sleep_hours_per_day" step="0.1" required placeholder="e.g., 7.5">
 
             <label for="cholesterol">Cholesterol:</label>
             <input type="number" name="cholesterol" required placeholder="Enter cholesterol level">
 
-            <label for="obesity">Obesity (1 for Yes, 0 for No):</label>
-            <input type="number" name="obesity" min="0" max="1" required placeholder="0 or 1">
-
-            <label for="diabetes">Diabetes (1 for Yes, 0 for No):</label>
-            <input type="number" name="diabetes" min="0" max="1" required placeholder="0 or 1">
 
             <button type="submit">Predict</button>
         </form>
 
-        {% if prediction is defined %}
-            <p>Prediction: {{ prediction }}</p>
-        {% endif %}
     </div>
 </body>
 </html>
