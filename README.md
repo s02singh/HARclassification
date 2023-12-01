@@ -8,7 +8,7 @@
 
 ## Overview
 
-This web application predicts the risk of a heart attack based on user-input parameters such as sleep hours per day, cholesterol levels, obesity, and diabetes. It utilizes a logistic regression model trained on a dataset of relevant health features.
+This web application predicts the risk of a heart attack based on user-input parameters such as sleep hours per day, cholesterol levels, obesity, and diabetes. It utilizes a random forest classifier trained on a dataset of relevant health features.
 
 ## Features
 
