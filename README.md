@@ -49,7 +49,6 @@ https://www.kaggle.com/code/sahilbirsingh/heartattackrisk/notebook
 
 ## Credits
   - The predictive model is built using scikit-learn and pandas.
-  - README file and webapp design guidance with ChatGPT.
  
 ## License
   - This project is licensed under the MIT License - see the LICENSE file for details.
