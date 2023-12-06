@@ -44,7 +44,7 @@ This web application predicts the risk of a heart attack based on user-input par
   - templates/: HTML templates for rendering web pages.
 
 ## Back-end Model Development
-Visit our Kaggle notebook to view the backend model code
+Explore our Kaggle notebook to review the backend model code:
 https://www.kaggle.com/code/sahilbirsingh/heartattackrisk/notebook
 
 ## Credits
