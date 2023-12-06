@@ -43,6 +43,10 @@ This web application predicts the risk of a heart attack based on user-input par
   - static/: Contains static assets (CSS file, images).
   - templates/: HTML templates for rendering web pages.
 
+## Back-end Model Development
+Visit our Kaggle notebook to view the backend model code
+https://www.kaggle.com/code/sahilbirsingh/heartattackrisk/notebook
+
 ## Credits
   - The predictive model is built using scikit-learn and pandas.
   - README file and webapp design guidance with ChatGPT.
