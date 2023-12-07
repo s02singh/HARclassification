@@ -4,8 +4,6 @@
     <img src="static/heart_attack_web_app.png" alt="Heart Attack Risk Prediction" width="500"/>
 </p>
 
-
-
 ## Overview
 
 This web application predicts the risk of a heart attack based on user-input parameters such as sleep hours per day, cholesterol levels, obesity, and diabetes. It utilizes a random forest classifier trained on a dataset of relevant health features.
@@ -32,6 +30,12 @@ This web application predicts the risk of a heart attack based on user-input par
 2. pip install -r requirements.txt
 
 3. python app.py
+
+4. Open http://localhost:8080/ on a browser to view web-app
+
+## Resolving Problems Opening Web-App
+  - If errors are showing up in the terminal, then that means the Python libraries are not being imported properly.
+  - Be sure to open Visual Studio Code through Anaconda to avoid this problem.
 
 ## Usage
   - Enter the required health parameters in the input form.
