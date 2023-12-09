@@ -51,6 +51,10 @@ This web application predicts the risk of a heart attack based on user-input par
 Explore our Kaggle notebook to review the backend model code:
 https://www.kaggle.com/code/sahilbirsingh/heartattackrisk/notebook
 
+## Video Demo of the Webapp
+Watch a quick demo on YouTube:
+https://www.youtube.com/watch?v=asg_9UIBY_Q
+
 ## Credits
   - The predictive model is built using scikit-learn and pandas.
  
